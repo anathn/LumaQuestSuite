@@ -1,0 +1,519 @@
+current_sprint:
+  number: 1
+  name: "Platform Foundation"
+  start_date: "2026-09-14"
+  end_date: "2026-09-27"
+  goal: "Stand up the containerized platform (web/api/worker/postgres/redis/minio/proxy) and the accounts/tenancy/security boundary everything else builds on."
+  completed_stories: []
+  in_progress_stories: []
+  planned_stories:
+    - "STORY-001-01"
+    - "STORY-001-02"
+    - "STORY-001-03"
+    - "STORY-001-04"
+    - "STORY-001-05"
+    - "STORY-002-01"
+    - "STORY-002-02"
+    - "STORY-002-03"
+    - "STORY-002-04"
+    - "STORY-002-05"
+
+epics:
+  - id: "EPIC-001"
+    name: "Platform Foundation & Containerized Infrastructure"
+    priority: "P0"
+    status: "ready-for-dev"
+    progress_percent: 0
+    stories:
+      - id: "STORY-001-01"
+        title: "Monorepo scaffold and container images for web/api/worker"
+        status: "ready-for-dev"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-001-02"
+        title: "Postgres, Redis, and MinIO containers on a private Compose network"
+        status: "ready-for-dev"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-001-03"
+        title: "Traefik reverse proxy with TLS and security headers"
+        status: "ready-for-dev"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-001-04"
+        title: "CI pipeline: build, tag, and push container images"
+        status: "ready-for-dev"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-001-05"
+        title: "Per-environment Compose stacks (dev/staging/prod) with isolated secrets"
+        status: "ready-for-dev"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+
+  - id: "EPIC-002"
+    name: "Accounts, Tenancy & Security"
+    priority: "P0"
+    status: "ready-for-dev"
+    progress_percent: 0
+    stories:
+      - id: "STORY-002-01"
+        title: "Family and ChildProfile models with Alembic migration"
+        status: "ready-for-dev"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-002-02"
+        title: "Parent authentication: Argon2 password + magic link, Redis session cookie"
+        status: "ready-for-dev"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-002-03"
+        title: "Tenancy-enforcement dependency and cross-family isolation tests"
+        status: "ready-for-dev"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-002-04"
+        title: "Child profile CRUD and in-session child selection"
+        status: "ready-for-dev"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-002-05"
+        title: "Secrets injection via Compose secrets/env files (no secrets in images/repo)"
+        status: "ready-for-dev"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+
+  - id: "EPIC-003"
+    name: "Shared Data Platform & Badge Engine"
+    priority: "P0"
+    status: "planning"
+    progress_percent: 0
+    stories:
+      - id: "STORY-003-01"
+        title: "RewardLedger, BadgeDefinition, ChildBadge models and migrations"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-003-02"
+        title: "Idempotent badge evaluator service"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-003-03"
+        title: "Badge catalog and per-child badge API with Redis cache"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-003-04"
+        title: "Today's-plan Redis cache keyed by child_id + date"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+
+  - id: "EPIC-004"
+    name: "Reading Content & Approval Workflow"
+    priority: "P0"
+    status: "planning"
+    progress_percent: 0
+    stories:
+      - id: "STORY-004-01"
+        title: "ReadingItem/ReadingVersion/TargetWord/Question models and migrations"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-004-02"
+        title: "Reading item CRUD API (create/edit/archive word sets, sentences, passages)"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-004-03"
+        title: "Version freeze-and-approve endpoint with immutability guarantee"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-004-04"
+        title: "Reading assignment API (assign approved version to a child)"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+
+  - id: "EPIC-005"
+    name: "Reading Child Session Experience"
+    priority: "P0"
+    status: "planning"
+    progress_percent: 0
+    stories:
+      - id: "STORY-005-01"
+        title: "ReadingSession lifecycle API (start/complete)"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-005-02"
+        title: "Today's reading plan endpoint and child home screen"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-005-03"
+        title: "Focus mode and accessibility display settings"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-005-04"
+        title: "Manual/parent-assisted reading mode (no microphone required)"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+
+  - id: "EPIC-006"
+    name: "Speech Alignment Pipeline"
+    priority: "P0"
+    status: "planning"
+    progress_percent: 0
+    stories:
+      - id: "STORY-006-01"
+        title: "Speech adapter interface and self-hosted faster-whisper implementation"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-006-02"
+        title: "Hosted STT adapter implementation, selectable via configuration"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-006-03"
+        title: "Transcript-to-passage alignment engine with event classification"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-006-04"
+        title: "Confidence thresholds and child/parent confirmation flow"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-006-05"
+        title: "Segment audio capture/upload with short-lived encrypted MinIO storage and auto-delete"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+
+  - id: "EPIC-007"
+    name: "Hints & Difficult-Word Practice"
+    priority: "P0"
+    status: "planning"
+    progress_percent: 0
+    stories:
+      - id: "STORY-007-01"
+        title: "Six-level hint ladder engine with hint_level tracking on ReadingEvent"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-007-02"
+        title: "Difficult-word extraction and scheduling for later review"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-007-03"
+        title: "Contextual retry of previously-hinted words in a later session"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+
+  - id: "EPIC-008"
+    name: "Comprehension Engine"
+    priority: "P0"
+    status: "planning"
+    progress_percent: 0
+    stories:
+      - id: "STORY-008-01"
+        title: "Question and QuestionAttempt models and migration"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-008-02"
+        title: "Comprehension answer API with deterministic scoring by question type"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-008-03"
+        title: "Incorrect-answer remediation linking back to source span"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-008-04"
+        title: "Parent-reviewed retell mode (no automated high-stakes score)"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+
+  - id: "EPIC-009"
+    name: "Rereading & Progression Scheduling"
+    priority: "P1"
+    status: "planning"
+    progress_percent: 0
+    stories:
+      - id: "STORY-009-01"
+        title: "Reread eligibility and due-date scheduler (Celery job)"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-009-02"
+        title: "Reread comparison logic (accuracy, hint use, self-correction, pacing)"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-009-03"
+        title: "Balanced daily plan selection (new vs. reread), capped catch-up"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+
+  - id: "EPIC-010"
+    name: "Reading Progress Dashboard"
+    priority: "P0"
+    status: "planning"
+    progress_percent: 0
+    stories:
+      - id: "STORY-010-01"
+        title: "Reading progress aggregation endpoint"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-010-02"
+        title: "Parent dashboard UI (sessions, words, comprehension, trends)"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-010-03"
+        title: "Drill-down from summary metric to source sessions, with filters"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+
+  - id: "EPIC-011"
+    name: "Reading Badges Integration"
+    priority: "P1"
+    status: "planning"
+    progress_percent: 0
+    stories:
+      - id: "STORY-011-01"
+        title: "Reading badge catalog seed data (13 badges)"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-011-02"
+        title: "Wire reading events into the shared badge evaluator"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-011-03"
+        title: "Unified badge collection UI with per-game filters"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+
+  - id: "EPIC-012"
+    name: "AI-Assisted Content Generation"
+    priority: "P1"
+    status: "planning"
+    progress_percent: 0
+    stories:
+      - id: "STORY-012-01"
+        title: "LLM adapter interface and self-hosted (Ollama) implementation"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-012-02"
+        title: "Hosted LLM adapter implementation, selectable via configuration"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-012-03"
+        title: "Constrained prompt builder (level, length, topic, target words)"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-012-04"
+        title: "Automated content checks (length, banned topics, target-word coverage, Q/A consistency)"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-012-05"
+        title: "Parent review/edit UI before approval"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+
+  - id: "EPIC-013"
+    name: "Observability, Reliability & Deployment Pipeline"
+    priority: "P1"
+    status: "planning"
+    progress_percent: 0
+    stories:
+      - id: "STORY-013-01"
+        title: "Structured JSON logging with request-ID correlation across containers"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-013-02"
+        title: "Prometheus + Grafana + Loki stack with alert rules"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-013-03"
+        title: "Error tracking (Sentry/GlitchTip) with child-data-safe scrubbing"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-013-04"
+        title: "Postgres backup (pg_dump/WAL) and documented restore runbook"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-013-05"
+        title: "Automated migration-then-deploy sequencing in the CI/CD pipeline"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+
+  - id: "EPIC-014"
+    name: "Privacy, Accessibility & Release Readiness"
+    priority: "P0"
+    status: "planning"
+    progress_percent: 0
+    stories:
+      - id: "STORY-014-01"
+        title: "Opt-in audio retention: consent record, encrypted storage, deletion control"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-014-02"
+        title: "Family-level data export and deletion controls"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-014-03"
+        title: "Accessibility audit and fixes (screen reader, keyboard, text scaling, reduced motion)"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+      - id: "STORY-014-04"
+        title: "Tenant-isolation and content-authorization security test suite"
+        status: "planning"
+        assignee: null
+        started_date: null
+        completed_date: null
+        blockers: []
+
+sprint_history: []
